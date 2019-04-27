@@ -139,8 +139,14 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# set background
+exec --no-startup-id feh --bh-fill ~/Pictures/debian_wallpaper.png
+
 # lock current session
-bindsym Control+$mod+l exec "i3lock  -t -i ~/Pictures/debian-wallpaper.png"
+bindsym Control+$mod+l exec "betterlockscreen -l dim"
+
+# for systems without betterlockscreen installed
+# bindsym Control+$mod+l exec "i3lock  -t -i ~/Pictures/debian-wallpaper.png"
 # -c 000000
 
 # resize window (you can also use the mouse for that)
