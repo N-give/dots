@@ -24,9 +24,13 @@ let g:airline#themes#mytheme#palette.insert_paste = {
       \ 'airline_a': [ s:I1[0]   , '#d78700' , s:I1[2] , 172     , ''     ] ,
       \ }
 
-let g:airline#themes#mytheme#palette.replace = {
-      \ 'airline_a': [ s:I1[0]   , 161 , s:I1[2] , 124     , ''     ] ,
-      \ }
+let s:R1 = [ '#5fff00' , s:guibg , 161 , s:termbg  ]
+let s:R2 = [ '#ff5f00' , s:guibg , 123 , s:termbg  ]
+let s:R3 = [ '#767676' , s:guibg , 121 , s:termbgm ]
+let g:airline#themes#mytheme#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
+" let g:airline#themes#mytheme#palette.replace = {
+"       \ 'airline_a': [ s:I1[0]   , 161 , s:I1[2] , 124     , ''     ] ,
+"       \ }
 let g:airline#themes#mytheme#palette.replace_modified = copy(g:airline#themes#mytheme#palette.normal_modified)
 
 let s:V1 = [ '#dfdf00' , s:guibg , 184 , s:termbg  ]
