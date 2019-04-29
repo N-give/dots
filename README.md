@@ -6,5 +6,6 @@ Currently using the following technologies and their dependencies:
 
     1. Font Awesome
 
-2. vim-airline
-3. vim-airline-themes
+2. neovim
+3. vim-airline
+4. vim-airline-themes
