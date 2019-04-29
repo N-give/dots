@@ -8,4 +8,3 @@ Currently using the following technologies and their dependencies:
 
 2. vim-airline
 3. vim-airline-themes
-4. 
