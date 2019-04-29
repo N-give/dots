@@ -42,13 +42,11 @@ let g:airline_symbols.branch = '⎇'
 " let g:airline_left_sep = '▶'
 " let g:airline#extensions#ale#enabled = 1
 " let g:airline_section_z = airline#section#create_right(['linenr','maxlinenr'])
-
-" editorconfig
-let g:EditorConfig_disable_rules=['max_line_length']
-
 " let g:airline_powerline_fonts=1
 " let g:Powerline_symbols='fancy'
 
+" editorconfig
+let g:EditorConfig_disable_rules=['max_line_length']
 
 " gitgutter
 set updatetime=10
@@ -64,7 +62,11 @@ let g:ale_fix_on_save=1
 " base 16
 set background=dark
 let base16colorspace=256
-let g:airline_theme = 'angr'
+
+" airline theme
+" let g:airline_theme = 'angr'
+let g:airline_theme='mytheme'
+
 
 " deoplete
 let g:deoplete#enable_at_startup=1

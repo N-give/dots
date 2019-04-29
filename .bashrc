@@ -126,11 +126,8 @@ fi
 eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
 
-# added by Anaconda3 installer
-# export PATH="/home/nate/anaconda3/bin:$PATH"
-# . /home/nate/anaconda3/etc/profile.d/conda.sh
-
 export PATH="$PATH:/home/nate/.cargo/bin/cargo-deb"
+# export PATH="$PATH:/home/nate/.cargo/bin/alacritty"
 
 # added by Anaconda3 5.3.0 installer
 # >>> conda init >>>
