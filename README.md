@@ -4,7 +4,7 @@ Trying to synchronize my current configurations across my computers. Hopefully t
 Currently using the following technologies and their dependencies:
 1. polybar
 
-  1. Font Awesome
+    1. Font Awesome
 
 2. vim-airline
 3. vim-airline-themes
