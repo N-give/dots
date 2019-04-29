@@ -79,7 +79,7 @@ let g:deoplete#sources#jedi#python_path='/usr/bin/python3'
 
 " deoplete rust
 let g:deoplete#sources#rust#racer_binary='/home/nate/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/home/nate/rust/src'
+let g:deoplete#sources#rust#rust_source_path='/home/nate/rust/src/'
 let g:deoplete#sources#rust#documentation_max_height=20
 let g:deoplete#sources#rust#disable_keymap=1
 
