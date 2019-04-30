@@ -53,6 +53,7 @@ set updatetime=10
 
 " ale
 let g:ale_lint_on_text_changed='always'
+let g:ale_lint_delay=50
 let g:ale_fixers = {
       \ 'javascript': ['eslint'],
       \ 'rust': ['rustfmt']
