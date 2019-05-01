@@ -23,6 +23,9 @@ call plug#end()
 let g:indentLine_char = '|'
 let g:indentLine_enable = 1
 
+
+let g:rust_recommend_style=0
+
 " ctrl-p
 let g:ctrlp_map='<C-p>'
 
@@ -34,12 +37,12 @@ let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#tab_nr_type=1
 set ttimeoutlen=10
-let g:airline_powerline_fonts=1
+" let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')
  let g:airline_symbols = {}
 endif
 let g:airline_symbols.branch = '⎇'
-let g:airline_powerline_fonts=1
+" let g:airline_powerline_fonts=1
 " let g:Powerline_symbols='fancy'
 
 " editorconfig
@@ -79,10 +82,10 @@ let g:deoplete#sources#jedi#python_path='/usr/bin/python3'
 let g:deoplete#sources#rust#racer_binary='/home/nate/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path='/home/nate/rust/src/'
 let g:deoplete#sources#rust#documentation_max_height=20
-let g:deoplete#sources#rust#disable_keymap=1
+" let g:deoplete#sources#rust#disable_keymap=1
 
 " nmap <buffer> gd <plug>DeopleteRustGoToDefinitionSplit
-nmap <buffer> K <plug>DeopleteRustShowDocumentation
+" nmap <buffer> K <plug>DeopleteRustShowDocumentation
 
 " deoplete_tern
 let g:deoplete#sources#ternjs#tern_bin='/home/nate/.nvm/versions/node/v10.4.0/lib/tern_bin'
@@ -112,6 +115,7 @@ set showmatch
 set hlsearch
 set ignorecase
 set smartcase
+" let g:polyglot_disabled=['rust', 'rs']
 set textwidth=80
 
 au FileType markdown setl sw=4 sts=4 et
