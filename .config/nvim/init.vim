@@ -39,10 +39,7 @@ if !exists('g:airline_symbols')
  let g:airline_symbols = {}
 endif
 let g:airline_symbols.branch = '⎇'
-" let g:airline_left_sep = '▶'
-" let g:airline#extensions#ale#enabled = 1
-" let g:airline_section_z = airline#section#create_right(['linenr','maxlinenr'])
-" let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=1
 " let g:Powerline_symbols='fancy'
 
 " editorconfig
