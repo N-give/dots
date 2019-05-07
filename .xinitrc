@@ -1,14 +1,2 @@
 #! /bin/sh
-
-cat ~/.config/i3/config.base > ~/.config/i3/config
-
-if [ "$HOSTNAME" == "gon" ]; then
-  cat ~/.config/i3/config.gon >> ~/.config/i3/config
-elif [ "$HOSTNAME" == "saitama" ]
-  cat ~/.config/i3/config.saitama >> ~/.config/i3/config
-else
-  cat ~/.config/i3/config.other >> ~/.config/i3/config
-fi
-
-feh --bg-scale ~/Pictures/rand_pic.png
-
+$HOME/.config/i3/i3_setup.sh
