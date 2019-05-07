@@ -1,0 +1,4 @@
+
+# lock current session
+
+bindsym Control+$mod+l exec "i3lock -e -i ~/Pictures/rand_pic.png"

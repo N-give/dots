@@ -143,13 +143,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # This should be tacken care of with .xinitrc
 # exec --no-startup-id feh --bg-fill ~/Pictures/debian_wallpaper.png
 
-# lock current session
-# bindsym Control+$mod+l exec "betterlockscreen -l dim"
-
-# for systems without betterlockscreen installed
-# bindsym Control+$mod+l exec "i3lock  -t -i ~/Pictures/debian-wallpaper.png"
-# -c 000000
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
