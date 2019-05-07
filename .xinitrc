@@ -1,3 +1,5 @@
+#! /bin/sh
+
 cat ~/.config/i3/config.base > ~/.config/i3/config
 
 if [ "$HOSTNAME" == "gon" ]; then
