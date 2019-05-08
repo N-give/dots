@@ -12,3 +12,4 @@ Currently using the following technologies and their dependencies:
 
 1. i3
 
+1. tmux
