@@ -1,7 +1,4 @@
 call plug#begin("$HOME/.config/nvim/plugged")
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
 Plug 'chriskempson/base16'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -16,8 +13,16 @@ Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
+" Deoplete and sources
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'zchee/deoplete-jedi'
+Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
 Plug 'sebastianmarkow/deoplete-rust'
+Plug 'Shougo/deoplete-clangx'
 call plug#end()
+
+" vimwiki
+nmap <silent> <leader>vwh :Vimwiki2HTML<cr>
 
 " indentLine settings
 let g:indentLine_char = '|'
@@ -60,6 +65,12 @@ let g:ale_fixers = {
       \}
 let g:ale_fix_on_save=1
 
+nmap <silent> <leader>ane <Plug>(ale_next_wrap_error)
+nmap <silent> <leader>ape <Plug>(ale_previous_wrap_error)
+nmap <silent> <leader>anw <Plug>(ale_next_wrap_warning)
+nmap <silent> <leader>apw <Plug>(ale_previous_wrap_warning)
+nmap <silent> <leader>ad :ALEDetail<cr>
+
 " base 16
 set background=dark
 let base16colorspace=256
@@ -68,10 +79,14 @@ let base16colorspace=256
 " let g:airline_theme = 'angr'
 let g:airline_theme='mytheme'
 
-
-" deoplete
+""""""""""""
+" deoplete "
+""""""""""""
 let g:deoplete#enable_at_startup=1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" deoplete clangx
+
 
 " deoplete-jedi
 let g:deoplete#sources#jedi#enable_typeinfo=1
