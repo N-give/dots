@@ -17,6 +17,7 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 Plug 'sebastianmarkow/deoplete-rust'
+Plug 'mattn/calendar-vim'
 call plug#end()
 
 " indentLine settings
@@ -96,11 +97,36 @@ let g:deoplete#sources#rust#documentation_max_height=20
 " deoplete_tern
 let g:deoplete#sources#ternjs#tern_bin='/home/nate/.nvm/versions/node/v10.4.0/lib/tern_bin'
 let g:deoplete#sources#ternjs#timeout=1
-
 let g:deoplete#sources#ternjs#case_insensitive=1
-
 let g:deoplete#sources#ternjs#filetypes=["jsx","javascript.sx","vue","react"]
 
+" vimwiki
+let g:vimwiki_list = [
+    \{'path': '~/vimwiki/', 'syntax': 'markdown'},
+    \{'path': '~/learning_rust/', 'syntax': 'markdown'}
+  \]
+
+let wiki = {}
+let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c':'c', 'Rust':'rust'}
+let wiki.path = '~/vimwiki/'
+let g:vimwiki_list = [wiki]
+
+au BufRead,BufNewFile *.wiki set filetype=vimwiki
+:autocmd FileType vimwiki map <Leader>d :VimwikiMakeDiaryNote
+function! ToggleCalendar()
+  execute ":Calendar"
+  if exists("g:calendar_open")
+    if g:calendar_open == 1
+      execute "q"
+      unlet g:calendar_open
+    else
+      g:calendar_open = 1
+    end
+  else
+    let g:calendar_open = 1
+  end
+endfunction
+:autocmd FileType vimwiki map <Leader>c :call ToggleCalendar()
 
 " set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 set hidden
@@ -116,7 +142,7 @@ set tabstop=2
 set shiftwidth=2
 set smarttab
 syntax on
-filetype indent on
+filetype plugin indent on
 set showmatch
 set hlsearch
 set ignorecase
