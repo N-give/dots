@@ -13,4 +13,3 @@ else
   feh --bg-scale ~/Pictures/rand_pic.png
 fi
 
-
