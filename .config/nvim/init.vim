@@ -165,8 +165,7 @@ set smartcase
 " let g:polyglot_disabled=['rust', 'rs']
 set textwidth=80
 
-au FileType markdown setl sw=4 sts=4 et
-au FileType markdown setl sw=4 sts=4 et
+au FileType markdown setl sw=4 sts=4 et textwidth=120
 
 "                          "
 " alternative key bindings "
