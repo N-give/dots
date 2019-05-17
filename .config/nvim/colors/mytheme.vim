@@ -13,7 +13,7 @@ let g:colors_name = "mytheme"
 " TODO
 "  Group        term            ctermbg             ctermfg
 
-hi Normal		                ctermbg=Black       ctermfg=7
+hi Normal		                ctermbg=Black       ctermfg=250
 hi Comment      term=bold       ctermbg=Black       ctermfg=8
 hi Constant		term=underline  ctermbg=Black       ctermfg=LightGreen
 hi String		term=underline  ctermbg=Black       ctermfg=140
@@ -25,7 +25,7 @@ hi PreProc		term=underline  ctermbg=Black       ctermfg=67
 hi Search		term=reverse    ctermbg=193
 hi Operator		term=bold	                        ctermfg=7
 hi Special		term=bold	                        ctermfg=159
-hi Statement	term=bold	                        ctermfg=121
+hi Statement	term=bold	                        ctermfg=114
 hi Type						                        ctermfg=153
 hi Error		term=reverse    ctermbg=Red	        ctermfg=White
 hi Todo			term=standout   ctermbg=NONE        ctermfg=1
