@@ -319,9 +319,8 @@ you should place your code here."
                                     auto-completion-tab-key-behavior 'cycle)
                    spacemacs-default-company-backends '(company-files
                                                         company-capf)))
-  (setq-default fill-column 80)
-  (setq-default fill-column-indicator t)
-  (setq-default auto-fill-mode 'do-auto-fill))
+  (turn-on-fci-mode)
+  (turn-on-auto-fill))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
