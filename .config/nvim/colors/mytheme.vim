@@ -13,35 +13,35 @@ let g:colors_name = "mytheme"
 " TODO
 "  Group        term            ctermbg             ctermfg
 
-hi Normal		                ctermbg=Black       ctermfg=250
-hi Comment      term=bold       ctermbg=Black       ctermfg=8
-hi Constant		term=underline  ctermbg=Black       ctermfg=LightGreen
-hi String		term=underline  ctermbg=Black       ctermfg=140
-hi Number		term=underline  ctermbg=Black       ctermfg=45
-hi Boolean		term=underline  ctermbg=Black       ctermfg=49
-hi Identifier	term=underline  ctermbg=Black       ctermfg=147
-hi Ignore					    ctermbg=Black       ctermfg=black
-hi PreProc		term=underline  ctermbg=Black       ctermfg=67
+hi Normal		                ctermbg=234         ctermfg=250
+hi Comment      term=NONE       ctermbg=234         ctermfg=8
+hi Constant		term=underline  ctermbg=234         ctermfg=LightGreen
+hi String		term=underline  ctermbg=234         ctermfg=140
+hi Number		term=underline  ctermbg=234         ctermfg=45
+hi Boolean		term=underline  ctermbg=234         ctermfg=49
+hi Identifier	term=underline  ctermbg=234         ctermfg=147
+hi Ignore					    ctermbg=234         ctermfg=black
+hi PreProc		term=underline  ctermbg=234         ctermfg=67
 hi Search		term=reverse    ctermbg=193
-hi Operator		term=bold	                        ctermfg=7
-hi Special		term=bold	                        ctermfg=159
-hi Statement	term=bold	                        ctermfg=114
+hi Operator		term=NONE	                        ctermfg=7
+hi Special		term=NONE	                        ctermfg=159
+hi Statement	term=NONE	                        ctermfg=114
 hi Type						                        ctermfg=153
 hi Error		term=reverse    ctermbg=Red	        ctermfg=White
 hi Todo			term=standout   ctermbg=NONE        ctermfg=1
 " From the source:
 hi Cursor										    guifg=Orchid	guibg=fg
-hi Directory	term=bold	    ctermfg=LightCyan    guifg=Cyan
+hi Directory	term=NONE	    ctermfg=LightCyan    guifg=Cyan
 hi ErrorMsg		term=standout   ctermbg=DarkRed	    ctermfg=White guibg=Red guifg=White
 hi IncSearch	term=reverse    cterm=reverse	    gui=reverse
 hi LineNr		term=underline                      ctermfg=8
-hi ModeMsg		term=bold	    cterm=bold		    gui=bold
-hi MoreMsg		term=bold	    ctermfg=LightGreen   gui=bold		guifg=SeaGreen
-hi NonText		term=bold	    ctermfg=Blue		    gui=bold		guifg=Blue
-hi Question		term=standout   ctermfg=LightGreen   gui=bold		guifg=Cyan
-hi SpecialKey	term=bold	    ctermfg=LightBlue    guifg=Cyan
-hi StatusLine	term=reverse,bold cterm=reverse     gui=NONE		guifg=White guibg=darkblue
+hi ModeMsg		term=NONE	    cterm=NONE		    gui=NONE
+hi MoreMsg		term=NONE	    ctermfg=LightGreen   gui=NONE		guifg=SeaGreen
+hi NonText		term=NONE	    ctermfg=Blue		    gui=NONE		guifg=Blue
+hi Question		term=standout   ctermfg=LightGreen   gui=NONE		guifg=Cyan
+hi SpecialKey	term=NONE	    ctermfg=LightBlue    guifg=Cyan
+hi StatusLine	term=reverse,NONE cterm=reverse     gui=NONE		guifg=White guibg=darkblue
 hi StatusLineNC term=reverse    cterm=reverse	  gui=NONE		guifg=white guibg=#333333
-hi Title		term=bold	    ctermfg=LightMagenta gui=bold	guifg=Pink
+hi Title		term=NONE	    ctermfg=LightMagenta gui=NONE	guifg=Pink
 hi WarningMsg	term=standout   ctermfg=LightRed   guifg=Red
 hi Visual       term=reverse    ctermfg=White
