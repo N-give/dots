@@ -65,6 +65,7 @@ let g:ale_fixers = {
       \ 'rust': ['rustfmt']
       \}
 let g:ale_fix_on_save=1
+let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 
 nmap <silent> <leader>ane <Plug>(ale_next_wrap_error)
 nmap <silent> <leader>ape <Plug>(ale_previous_wrap_error)
