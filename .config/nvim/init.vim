@@ -1,4 +1,8 @@
 call plug#begin("$HOME/.config/nvim/plugged")
+Plug 'autozimu/LanguageClient-neovim', {
+  \ 'branch': 'next',
+  \ 'do': 'bash install.sh',
+  \ }
 Plug 'chriskempson/base16'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
