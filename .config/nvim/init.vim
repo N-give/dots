@@ -63,13 +63,20 @@ set updatetime=10
 
 " ale
 let g:ale_lint_on_text_changed='always'
+let g:ale_lint_on_insert_leave=1
+let g:ale_fix_on_save=1
 let g:ale_lint_delay=50
+let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 let g:ale_fixers = {
       \ 'javascript': ['eslint'],
       \ 'rust': ['rustfmt']
       \}
-let g:ale_fix_on_save=1
-let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
+
+let g:ale_sign_error=''
+let g:ale_sign_info=''
+let g:ale_sign_warning=''
+let g:ale_open_list=1
+let g:ale_list_window_size=5
 
 nmap <silent> <leader>ane <Plug>(ale_next_wrap_error)
 nmap <silent> <leader>ape <Plug>(ale_previous_wrap_error)
