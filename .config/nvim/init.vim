@@ -26,6 +26,8 @@ Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/deoplete-clangx'
 call plug#end()
 
+map <Space> <leader>
+
 " vimwiki
 nmap <silent> <leader>vwh :Vimwiki2HTML<cr>
 
@@ -77,6 +79,8 @@ let g:ale_sign_info=''
 let g:ale_sign_warning=''
 let g:ale_open_list=1
 let g:ale_list_window_size=5
+let g:ale_set_quickfix=1
+let g:ale_set_loclist=0
 
 nmap <silent> <leader>ane <Plug>(ale_next_wrap_error)
 nmap <silent> <leader>ape <Plug>(ale_previous_wrap_error)
