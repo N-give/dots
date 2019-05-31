@@ -166,7 +166,7 @@ set showcmd
 set backspace=indent,eol,start
 set autoindent
 set confirm
-set number
+" set number
 set expandtab
 set softtabstop=0
 set tabstop=2
@@ -182,6 +182,14 @@ set smartcase
 set textwidth=80
 
 au FileType markdown setl sw=4 sts=4 et textwidth=120
+
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
 
 "                          "
 " alternative key bindings "
