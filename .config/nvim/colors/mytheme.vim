@@ -27,21 +27,26 @@ hi Operator		term=NONE	                        ctermfg=7
 hi Special		term=NONE	                        ctermfg=159
 hi Statement	term=NONE	                        ctermfg=114
 hi Type						                        ctermfg=153
-hi Error		term=reverse    ctermbg=Red	        ctermfg=White
+hi Error		term=reverse    ctermbg=None        ctermfg=1
 hi Todo			term=standout   ctermbg=NONE        ctermfg=1
 " From the source:
 hi Cursor										    guifg=Orchid	guibg=fg
-hi Directory	term=NONE	    ctermfg=LightCyan    guifg=Cyan
+hi Directory	term=NONE	    ctermfg=LightCyan   guifg=Cyan
 hi ErrorMsg		term=standout   ctermbg=DarkRed	    ctermfg=White guibg=Red guifg=White
 hi IncSearch	term=reverse    cterm=reverse	    gui=reverse
 hi LineNr		term=underline                      ctermfg=8
 hi ModeMsg		term=NONE	    cterm=NONE		    gui=NONE
-hi MoreMsg		term=NONE	    ctermfg=LightGreen   gui=NONE		guifg=SeaGreen
-hi NonText		term=NONE	    ctermfg=Blue		    gui=NONE		guifg=Blue
-hi Question		term=standout   ctermfg=LightGreen   gui=NONE		guifg=Cyan
-hi SpecialKey	term=NONE	    ctermfg=LightBlue    guifg=Cyan
+hi MoreMsg		term=NONE	    ctermfg=LightGreen  gui=NONE		guifg=SeaGreen
+hi NonText		term=NONE	    ctermfg=Blue		gui=NONE		guifg=Blue
+hi Question		term=standout   ctermfg=LightGreen  gui=NONE		guifg=Cyan
+hi SpecialKey	term=NONE	    ctermfg=LightBlue   guifg=Cyan
 hi StatusLine	term=reverse,NONE cterm=reverse     gui=NONE		guifg=White guibg=darkblue
-hi StatusLineNC term=reverse    cterm=reverse	  gui=NONE		guifg=white guibg=#333333
-hi Title		term=NONE	    ctermfg=LightMagenta gui=NONE	guifg=Pink
-hi WarningMsg	term=standout   ctermfg=LightRed   guifg=Red
+hi StatusLineNC term=reverse    cterm=reverse	    gui=NONE		guifg=white guibg=#333333
+hi Title		term=NONE	    ctermfg=LightMagenta gui=NONE	    guifg=Pink
+hi WarningMsg	term=standout   ctermfg=LightRed    guifg=Red
 hi Visual       term=reverse    ctermfg=White
+
+" Ale highlighting maybe
+hi ALEError                     ctermbg=124         ctermfg=None
+hi ALEWarning                   ctermbg=220         ctermfg=0
+hi ALEInfo                      ctermbg=81          ctermfg=0
