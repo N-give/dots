@@ -64,8 +64,8 @@ let g:EditorConfig_disable_rules=['max_line_length']
 set updatetime=10
 
 " ale
-let g:ale_lint_on_text_changed='always'
-let g:ale_lint_on_insert_leave=1
+" let g:ale_lint_on_text_changed='always'
+" let g:ale_lint_on_insert_leave=1
 let g:ale_fix_on_save=1
 let g:ale_lint_delay=50
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
@@ -74,19 +74,25 @@ let g:ale_fixers = {
       \ 'rust': ['rustfmt']
       \}
 
-let g:ale_sign_error=''
+let g:ale_sign_error=''
 let g:ale_sign_info=''
 let g:ale_sign_warning=''
 let g:ale_open_list=1
 let g:ale_list_window_size=5
-let g:ale_set_quickfix=1
-let g:ale_set_loclist=0
+" let g:ale_set_quickfix=1
+" let g:ale_set_loclist=0
 
 nmap <silent> <leader>ane <Plug>(ale_next_wrap_error)
 nmap <silent> <leader>ape <Plug>(ale_previous_wrap_error)
 nmap <silent> <leader>anw <Plug>(ale_next_wrap_warning)
 nmap <silent> <leader>apw <Plug>(ale_previous_wrap_warning)
 nmap <silent> <leader>ad :ALEDetail<cr>
+
+" auto close loclist with buffer
+augroup CloseLoclistWindowGroup
+  autocmd!
+  autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
 
 " base 16
 set background=dark
