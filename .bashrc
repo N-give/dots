@@ -126,25 +126,10 @@ fi
 eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
 
-export PATH="$PATH:/home/nate/.cargo/bin/cargo-deb"
-# export PATH="$PATH:/home/nate/.cargo/bin/alacritty"
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
 
-# added by Anaconda3 5.3.0 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$(CONDA_REPORT_ERRORS=false '/home/nate/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-    # \eval "$__conda_setup"
-# else
-    # if [ -f "/home/nate/anaconda3/etc/profile.d/conda.sh" ]; then
-        # . "/home/nate/anaconda3/etc/profile.d/conda.sh"
-        # CONDA_CHANGEPS1=false conda activate base
-    # else
-        # \export PATH="/home/nate/anaconda3/bin:$PATH"
-    # fi
-# fi
-# unset __conda_setup
-# <<< conda init <<<
+export PATH="$PATH:/home/nate/.cargo/bin/cargo-deb"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
