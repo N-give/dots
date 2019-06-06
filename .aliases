@@ -5,4 +5,4 @@ eval $(thefuck --alias FUCK)
 alias cls='clear && ls'
 alias cla='clear && ls -la'
 
-alias -g config="git --git-dir=$HOME/.dots/ --work-tree=$HOME"
+alias config="/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME"
