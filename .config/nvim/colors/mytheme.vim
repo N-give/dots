@@ -47,6 +47,6 @@ hi WarningMsg	term=standout   ctermfg=LightRed    guifg=Red
 hi Visual       term=reverse    ctermfg=White
 
 " Ale highlighting maybe
-hi ALEError                     ctermbg=124         ctermfg=None
-hi ALEWarning                   ctermbg=220         ctermfg=0
+hi ALEError                     ctermbg=238         ctermfg=None
+hi ALEWarning                   ctermbg=238         ctermfg=None
 hi ALEInfo                      ctermbg=81          ctermfg=0
