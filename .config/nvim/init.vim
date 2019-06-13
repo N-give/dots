@@ -201,6 +201,10 @@ augroup END
 " alternative key bindings "
 "                          "
 
+" map Ctrl-Backspace to delete the previous word in insert mode
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+
 " Switch buffers
 nnoremap <C-n> :bnext<CR>
 
