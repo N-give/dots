@@ -2,7 +2,7 @@ alias -g v="nvim"
 eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
 
-alias cexa='clear && exa'
-alias cexla='clear && exa -la'
+alias clex='clear && exa'
+alias cela='clear && exa -la'
 
 alias config="/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME"
