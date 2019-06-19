@@ -3,6 +3,7 @@ Trying to synchronize my current configurations across my computers. Hopefully t
 
 Currently using the following technologies and their dependencies:
 1. neovim
+
     2. vim-plug
     2. vim-airline
     2. vim-airline-themes
