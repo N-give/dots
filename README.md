@@ -4,13 +4,13 @@ Trying to synchronize my current configurations across my computers. Hopefully t
 Currently using the following technologies and their dependencies:
 1. neovim
 
-    2. vim-plug
-    2. vim-airline
-    2. vim-airline-themes
+    1. vim-plug
+    1. vim-airline
+    1. vim-airline-themes
 
 1. polybar
 
-    2. Font Awesome
+    1. Font Awesome
 
 1. i3
 
