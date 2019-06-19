@@ -9,6 +9,7 @@ Currently using the following technologies and their dependencies:
     2. vim-airline-themes
 
 1. polybar
+
     2. Font Awesome
 
 1. i3
