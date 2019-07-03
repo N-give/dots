@@ -7,8 +7,8 @@ if [ "$HOSTNAME" == "gon" ]; then
   feh --bg-scale ~/Pictures/debian_wallpaper.png
 elif [ "$HOSTNAME" == "saitama" ]; then
   cat ~/.config/i3/config.saitama >> ~/.config/i3/config
-  feh --bg-scale ~/Pictures/debian_wallpaper.png
   xrandr --output HDMI-0 --left-of DP-0
+  feh --bg-scale ~/Pictures/debian_wallpaper.png
 else
   cat ~/.config/i3/config.other >> ~/.config/i3/config
   feh --bg-scale ~/Pictures/rand_pic.png

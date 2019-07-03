@@ -1,3 +1,2 @@
 # lock current session
-
 bindsym Control+$mod+l exec "betterlockscreen -l dim"
