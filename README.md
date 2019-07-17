@@ -17,3 +17,5 @@ Currently using the following technologies and their dependencies:
 1. tmux
 
 1. zsh
+
+1. emacs (Spacemacs)
