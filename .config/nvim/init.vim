@@ -77,7 +77,7 @@ let g:ale_fixers = {
 let g:ale_sign_error=''
 let g:ale_sign_info=''
 let g:ale_sign_warning=''
-let g:ale_open_list=1
+" let g:ale_open_list=1
 let g:ale_list_window_size=5
 " let g:ale_set_quickfix=1
 " let g:ale_set_loclist=0
@@ -87,6 +87,10 @@ nmap <silent> <leader>ape <Plug>(ale_previous_wrap_error)
 nmap <silent> <leader>anw <Plug>(ale_next_wrap_warning)
 nmap <silent> <leader>apw <Plug>(ale_previous_wrap_warning)
 nmap <silent> <leader>ad :ALEDetail<cr>
+nmap <silent> <leader>co :copen<cr>
+nmap <silent> <leader>cc :cclose<cr>
+nmap <silent> <leader>lo :lopen<cr>
+nmap <silent> <leader>lc :lclose<cr>
 
 " auto close loclist with buffer
 augroup CloseLoclistWindowGroup
