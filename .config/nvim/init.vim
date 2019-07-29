@@ -71,7 +71,8 @@ let g:ale_lint_delay=50
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 let g:ale_fixers = {
       \ 'javascript': ['eslint'],
-      \ 'rust': ['rustfmt']
+      \ 'rust': ['rustfmt'],
+      \ 'python': ['autopep8']
       \}
 
 let g:ale_sign_error=''
