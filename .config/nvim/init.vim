@@ -24,6 +24,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/deoplete-clangx'
+" Plug 'vim-scripts/superior-haskell-interaction-mode-shim'
 call plug#end()
 
 map <Space> <leader>
