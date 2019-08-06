@@ -178,7 +178,6 @@ set showcmd
 set backspace=indent,eol,start
 set autoindent
 set confirm
-" set number
 set expandtab
 set softtabstop=0
 set tabstop=2
@@ -190,8 +189,8 @@ set showmatch
 set hlsearch
 set ignorecase
 set smartcase
-" let g:polyglot_disabled=['rust', 'rs']
 set textwidth=80
+set mouse=a
 
 au FileType markdown setl sw=4 sts=4 et textwidth=120
 
