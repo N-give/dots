@@ -66,6 +66,7 @@ let g:ale_fix_on_save=1
 let g:ale_lint_delay=50
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 let g:ale_fixers = {
+      \ '*': ['trim_whitespace'],
       \ 'javascript': ['eslint'],
       \ 'rust': ['rustfmt'],
       \ 'python': ['autopep8']
