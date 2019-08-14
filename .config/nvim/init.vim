@@ -16,15 +16,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
-Plug 'vimwiki/vimwiki'
-Plug 'mattn/calendar-vim'
+
 " Deoplete and sources
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'zchee/deoplete-jedi'
 Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/deoplete-clangx'
-" Plug 'vim-scripts/superior-haskell-interaction-mode-shim'
+Plug 'vim-scripts/superior-haskell-interaction-mode-shim'
 call plug#end()
 
 map <Space> <leader>
@@ -105,8 +104,8 @@ set background=dark
 let base16colorspace=256
 
 " airline theme
-" let g:airline_theme = 'angr'
-let g:airline_theme='mytheme'
+let g:airline_theme = 'angr'
+" let g:airline_theme='test_theme.vim'
 
 """"""""""""
 " deoplete "
