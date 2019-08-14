@@ -3,7 +3,7 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ 'branch': 'next',
   \ 'do': 'bash install.sh',
   \ }
-Plug 'chriskempson/base16'
+Plug 'chriskempson/base16-vim'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sheerun/vim-polyglot'
@@ -67,7 +67,7 @@ let g:ale_lint_delay=50
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 let g:ale_fixers = {
       \ '*': ['trim_whitespace'],
-      \ 'javascript': ['eslint'],
+      \ 'javascript': ['eslint', 'prettier'],
       \ 'rust': ['rustfmt'],
       \ 'python': ['autopep8']
       \}
