@@ -221,4 +221,4 @@ nnoremap <F8> :NERDTreeToggle<CR>
 " autocmd BufWritePre * :%s/\s+$//e
 
 " colors
-colorscheme plastic
+colorscheme base16-default-dark
