@@ -220,5 +220,9 @@ nnoremap <F8> :NERDTreeToggle<CR>
 " clear white space
 " autocmd BufWritePre * :%s/\s+$//e
 
-" colors
-colorscheme base16-default-dark
+" base16
+" colorscheme base16-default-dark
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
