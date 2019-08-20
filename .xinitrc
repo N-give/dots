@@ -1,2 +1,1 @@
-#! /bin/sh
-$HOME/.config/i3/i3_setup.sh
+exec ck-launch-session dbus-launch --sh-syntax --exit-with-session i3
