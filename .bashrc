@@ -133,15 +133,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
 export LANG="en_US.utf8"
 
 if [ -d "$HOME/.local/bin" ] ; then
-  PATH="$PATH:$HOME/.local/bin"
+  export PATH="$PATH:$HOME/.local/bin"
 fi
 
 eval "$(thefuck --alias)"
 
-export PATH="$HOME/.cargo/bin:$PATH"
+if [ -d "$HOME/.cargo/bin/" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 export EDITOR=nvim
