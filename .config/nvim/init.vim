@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
+Plug 'junegunn/vim-easy-align'
 
 " Deoplete and sources
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
@@ -221,6 +222,10 @@ nnoremap <C-n> :bnext<CR>
 
 " NERDTree Toggle
 nnoremap <F8> :NERDTreeToggle<CR>
+
+" easy align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " clear white space
 " autocmd BufWritePre * :%s/\s+$//e
