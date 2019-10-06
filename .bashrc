@@ -150,3 +150,12 @@ export EDITOR=nvim
 if [ -f $HOME/.completions ]; then
   source $HOME/.completions
 fi
+
+if test -z "${XDG_RUNTIME_DIR}"; then
+  export XDG_RUNTIME_DIR=/var/run/user/${UID}-runtime-dir
+  if ! test -d "${XDG_RUNTIME_DIR}"; then
+    mkdir "${XDG_RUNTIME_DIR}"
+    chmod 0700 "${XDG_RUNTIME_DIR}"
+  fi
+fi
+
