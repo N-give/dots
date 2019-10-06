@@ -124,25 +124,29 @@ fi
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-  [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-    eval "$("$BASE16_SHELL/profile_helper.sh")"
+# BASE16_SHELL="$HOME/.config/base16-shell/"
+# [ -n "$PS1" ] && \
+#   [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#     eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export LANG="en_US.utf8"
 
-if [ -d "$HOME/.local/bin" ] ; then
-  export PATH="$PATH:$HOME/.local/bin"
-fi
+# if [ -d "$HOME/.local/bin" ] ; then
+#   export PATH="$PATH:$HOME/.local/bin"
+# fi
 
 eval "$(thefuck --alias)"
 
-if [ -d "$HOME/.cargo/bin/" ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
-fi
+# if [ -d "$HOME/.cargo/bin/" ]; then
+#   export PATH="$HOME/.cargo/bin:$PATH"
+# fi
 
 export EDITOR=nvim
+
+if [ -f $HOME/.completions ]; then
+  source $HOME/.completions
+fi
