@@ -213,10 +213,6 @@ augroup END
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 
-noremap <leader>w :w<CR>
-noremap <leader>wq :wq<CR>
-noremap <leader>q :q<CR>
-
 " Switch buffers
 nnoremap <C-n> :bnext<CR>
 
