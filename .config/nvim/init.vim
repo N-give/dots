@@ -18,6 +18,8 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
 
+Plug 'chriskempson/base16-vim'
+
 " Deoplete and sources
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'zchee/deoplete-jedi'
