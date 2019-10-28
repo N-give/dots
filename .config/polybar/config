@@ -63,7 +63,7 @@ modules-center = mpd
 modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
-tray-padding = 2
+tray-padding = 5
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
