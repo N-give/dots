@@ -20,6 +20,9 @@ Plug 'junegunn/vim-easy-align'
 
 Plug 'chriskempson/base16-vim'
 
+" latex
+Plug 'donRaphaco/neotex', { 'for': 'tex' }
+
 " Deoplete and sources
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'zchee/deoplete-jedi'
@@ -234,3 +237,6 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+
+" latex
+let g:tex_flavor = 'latex'
