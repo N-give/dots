@@ -23,7 +23,7 @@ background-alt = #333
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #5fc52a
+primary = #0a6cf5
 secondary = #e60053
 alert = #bd2c40
 
@@ -63,7 +63,7 @@ modules-center = mpd
 modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
-tray-padding = 5
+tray-padding = 45
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -93,15 +93,15 @@ font = 2
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.primary}
+# format-prefix-underline = ${colors.primary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.primary}
+# label-layout-underline = ${colors.primary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+# label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -217,7 +217,7 @@ font = 2
 ; format-prefix = 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f900ff
+# format-underline = #f900ff
 ; format-underline = #00ff00
 label = %percentage:2%%
 
@@ -229,7 +229,7 @@ font = 2
 ; format = MEM <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+# format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
@@ -242,7 +242,7 @@ font = 2
 ; format-prefix-foreground = ${colors.foreground-alt}
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+# format-connected-underline = #9f78e1
 label-connected = %essid%
 
 format-disconnected = 
@@ -266,7 +266,7 @@ interval = 3.0
 font = 2
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #55aa55
+# format-connected-underline = #55aa55
 label-connected = %local_ip%
 
 format-disconnected =
@@ -281,8 +281,11 @@ ramp-signal-foreground = ${colors.foreground-alt}
 type = internal/date
 interval = 1
 
-date =
-date-alt = "%Y-%m-%d "
+date = "%a %d"
+date-alt = "%d %b %Y"
+
+# date =
+# date-alt = "%Y-%m-%d"
 
 time = %H:%M
 time-alt = %H:%M:%S
@@ -411,7 +414,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #850aed
+# format-underline = #850aed
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
