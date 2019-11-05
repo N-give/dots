@@ -54,18 +54,18 @@ module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-; font-2 = siji:pixelsize=10;1
-font-2 = FreeSans:style=Regular
-; font-2 = Font Awesome 5 Free:size=12;4
+; font-2 = FreeMono:pixelsize=12;4
+font-2 = Font Awesome 5 Free:size=12;4
 
-modules-left = bspwm i3
-modules-center = mpd
-modules-right = filesystem xbacklight pulseaudio memory cpu wlan eth battery temperature date powermenu
+modules-left = bspwm i3 xwindow
+; modules-center = mpd
+modules-center =
+modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 ; modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
-tray-position = left
+tray-position = center
 tray-detached = true
-tray-padding = 10
+tray-padding = 5
 ; tray-maxsize = 20
 ;tray-background = #0063ff
 
@@ -89,14 +89,15 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:40:...%
+label-maxlen = 45
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 font = 2
 
-format-prefix = " "
+; format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 # format-prefix-underline = ${colors.primary}
 
@@ -140,7 +141,7 @@ label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
 ; Separator in between workspaces
-; label-separator = |
+; label-separator = "|"
 
 [module/i3]
 type = internal/i3
@@ -181,7 +182,6 @@ label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
-
 
 [module/mpd]
 type = internal/mpd
@@ -224,7 +224,7 @@ interval = 2
 font = 2
 
 ; format-prefix = 
-format-prefix = " "
+; format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 # format-underline = #f900ff
 ; format-underline = #00ff00
@@ -236,7 +236,7 @@ interval = 2
 font = 2
 
 ; format = MEM <label>
-format-prefix = " "
+; format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 # format-underline = #4bffdc
 label = %percentage_used%%
@@ -299,7 +299,7 @@ date-alt = "%d %b %Y"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = " "
+; format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
@@ -379,7 +379,7 @@ format-charging = <animation-charging> <label-charging>
 format-discharging = <animation-discharging> <label-discharging>
 ; format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+; format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 ; format-full-underline = ${self.format-charging-underline}
 
