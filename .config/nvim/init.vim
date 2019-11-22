@@ -23,13 +23,14 @@ Plug 'chriskempson/base16-vim'
 " latex
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Deoplete and sources
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
-Plug 'sebastianmarkow/deoplete-rust'
-Plug 'Shougo/deoplete-clangx'
-Plug 'vim-scripts/superior-haskell-interaction-mode-shim'
+" Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+" Plug 'zchee/deoplete-jedi'
+" Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
+" Plug 'sebastianmarkow/deoplete-rust'
+" Plug 'Shougo/deoplete-clangx'
+" Plug 'vim-scripts/superior-haskell-interaction-mode-shim'
 call plug#end()
 
 map <Space> <leader>
@@ -116,40 +117,80 @@ let base16colorspace=256
 let g:airline_theme = 'atomic'
 " let g:airline_theme='test_theme.vim'
 
+"""""""
+" coc "
+"""""""
+set cmdheight=2
+set updatetime=200
+set shortmess+=c
+set signcolumn=yes
+
+nmap <silent> gd <Plug>(coc-definition)
+" use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 """"""""""""
 " deoplete "
 """"""""""""
-let g:deoplete#enable_at_startup=1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" let g:deoplete#enable_at_startup=1
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " deoplete clangx
 
 
 " deoplete-jedi
-let g:deoplete#sources#jedi#enable_typeinfo=1
-let g:deoplete#sources#jedi#show_docstring=1
-let g:deoplete#sources#jedi#python_path='/usr/bin/python3'
+let g:python3_host_prog='/usr/bin/python'
+" let g:deoplete#sources#jedi#enable_typeinfo=1
+" let g:deoplete#sources#jedi#show_docstring=1
+" let g:deoplete#sources#jedi#python_path='python3'
+" let g:deoplete#sources#jedi#python_path='/usr/bin/python3'
 
 " deoplete rust
-if $USER == "ngivens"
-  let g:deoplete#sources#rust#racer_binary='/home/ngivens/.cargo/bin/racer'
-  let g:deoplete#sources#rust#rust_source_path='/home/ngivens/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
-elseif $USER == "nate"
-  let g:deoplete#sources#rust#racer_binary='/home/nate/.cargo/bin/racer'
-  let g:deoplete#sources#rust#rust_source_path='/home/nate/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
-endif
+" if $USER == "ngivens"
+"   let g:deoplete#sources#rust#racer_binary='/home/ngivens/.cargo/bin/racer'
+"   let g:deoplete#sources#rust#rust_source_path='/home/ngivens/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+" elseif $USER == "nate"
+"   let g:deoplete#sources#rust#racer_binary='/home/nate/.cargo/bin/racer'
+"   let g:deoplete#sources#rust#rust_source_path='/home/nate/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+" endif
 
-let g:deoplete#sources#rust#documentation_max_height=20
+" let g:deoplete#sources#rust#documentation_max_height=20
 " let g:deoplete#sources#rust#disable_keymap=1
 
 " nmap <buffer> gd <plug>DeopleteRustGoToDefinitionSplit
 " nmap <buffer> K <plug>DeopleteRustShowDocumentation
 
 " deoplete_tern
-let g:deoplete#sources#ternjs#tern_bin='/home/nate/.nvm/versions/node/v10.4.0/lib/tern_bin'
-let g:deoplete#sources#ternjs#timeout=1
-let g:deoplete#sources#ternjs#case_insensitive=1
-let g:deoplete#sources#ternjs#filetypes=["jsx","javascript.sx","vue","react"]
+" let g:deoplete#sources#ternjs#tern_bin='/home/nate/.nvm/versions/node/v13.1.0/bin/ternjs'
+" let g:deoplete#sources#ternjs#timeout=1
+" let g:deoplete#sources#ternjs#case_insensitive=1
+" let g:deoplete#sources#ternjs#filetypes=["jsx","javascript.sx","react"]
 
 " vimwiki
 let g:vimwiki_list = [
