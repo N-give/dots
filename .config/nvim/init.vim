@@ -240,6 +240,7 @@ set ignorecase
 set smartcase
 set textwidth=80
 set mouse=a
+set formatprg=hindent
 
 au FileType markdown setl sw=4 sts=4 et textwidth=120
 
