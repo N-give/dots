@@ -13,6 +13,30 @@
       "args": ["--background-index"],
       "filetypes": ["c", "cpp"],
       "rootPatterns": [".clang_format"]
+    },
+
+    "haskell": {
+      "command": "hie-wrapper",
+      "args": [
+        "--lsp"
+      ],
+      "rootPatterns": [
+        "stack.yaml",
+        ".hie-bios",
+        "cabal.config",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
+      "initializationOptions": {
+        "languageServerHaskell": {
+          "enableHIE": true,
+          "hlintOn": true
+        }
+      }
     }
   }
 }
