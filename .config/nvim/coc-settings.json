@@ -22,21 +22,20 @@
       ],
       "rootPatterns": [
         "stack.yaml",
-        ".hie-bios",
         "cabal.config",
         "package.yaml"
       ],
       "filetypes": [
         "hs",
-        "lhs",
+        "lsh",
         "haskell"
       ],
       "initializationOptions": {
         "languageServerHaskell": {
-          "enableHIE": true,
-          "hlintOn": true
+          "hlint": true
         }
       }
     }
   }
 }
+
