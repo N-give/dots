@@ -17,6 +17,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
+Plug 'frazrepo/vim-rainbow'
 
 Plug 'chriskempson/base16-vim'
 
@@ -24,6 +25,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Deoplete and sources
 " Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 " Plug 'zchee/deoplete-jedi'
@@ -240,8 +242,9 @@ set ignorecase
 set smartcase
 set textwidth=80
 set mouse=a
-set formatprg=hindent
+set formatprg=""
 
+autocmd BufNewFile,BufRead *.hs,*.lhs set formatprg=hindent
 au FileType markdown setl sw=4 sts=4 et textwidth=120
 
 set number relativenumber
@@ -282,3 +285,6 @@ endif
 
 " latex
 let g:tex_flavor = 'latex'
+
+" vim-rainbow
+let g:rainbow_active = 1
