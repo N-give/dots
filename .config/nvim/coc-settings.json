@@ -1,13 +1,15 @@
 {
-  "coc.preferences.timeout": 300,
   "languageserver": {
     "rust": {
-      "raLspServerPath": "/home/nate/.cargo/bin/ra_lsp_server",
-      "enableCargoWatchOnStartup": true,
-      "useClientWatching": true,
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
+      "command": "ra_lsp_server",
+      "args": ["--lsp"],
+      "filetypes": ["rs", "rust"],
+      "rootPatterns": ["Cargo.toml"],
+      "initializationOptions": {
+        "enableCargoWatchOnStartup": "enabled"
+      }
     },
+
     "clangd": {
       "command": "clangd",
       "args": ["--background-index"],
