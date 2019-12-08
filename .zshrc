@@ -73,6 +73,7 @@ plugins=(
   git
   rust
   node
+  python
   vi-mode
 )
 
@@ -121,7 +122,7 @@ fi
 # vi mode
 bindkey -v
 # export KEYTIMEOUT=1
-# 
+#
 # function zle-keymap-select {
 #   if [[ ${KEYMAP} == vicmd ]] ||
 #      [[ $1 = 'block' ]]; then
@@ -159,6 +160,6 @@ fpath=($fpath "/home/nate/.zfunctions")
   prompt spaceship
 
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-# SPACESHIP_USER_SHOW=false
+SPACESHIP_USER_SHOW=true
 
 spaceship_vi_mode_enable
