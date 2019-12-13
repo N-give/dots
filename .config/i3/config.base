@@ -55,7 +55,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # user defined programs
 bindsym $mod+c exec google-chrome
 bindsym $mod+v exec code
-bindsym $mod+n exec joplin-desktop
 
 # launch emacs
 bindsym $mod+Shift+Return exec emacs
