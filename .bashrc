@@ -141,10 +141,6 @@ export LANG="en_US.utf8"
 
 eval "$(thefuck --alias)"
 
-# if [ -d "$HOME/.cargo/bin/" ]; then
-#   export PATH="$HOME/.cargo/bin:$PATH"
-# fi
-
 export EDITOR=nvim
 
 if [ -f $HOME/.completions ]; then
