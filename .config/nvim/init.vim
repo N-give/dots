@@ -245,7 +245,7 @@ set mouse=a
 set formatprg=""
 
 autocmd BufNewFile,BufRead *.hs,*.lhs set formatprg=hindent
-au FileType markdown setl sw=4 sts=4 et textwidth=120
+au FileType markdown setl sw=2 sts=2 et textwidth=120
 
 set number relativenumber
 
