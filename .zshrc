@@ -75,6 +75,7 @@ plugins=(
   node
   python
   vi-mode
+  zsh-syntax-highlighting
 )
 
 export RPS1="%{$reset_color%}"
