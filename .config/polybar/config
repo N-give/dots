@@ -228,7 +228,7 @@ font = 2
 format-prefix-foreground = ${colors.foreground-alt}
 # format-underline = #f900ff
 ; format-underline = #00ff00
-label = %percentage:2%%
+label = %percentage%%
 
 [module/memory]
 type = internal/memory
@@ -239,7 +239,7 @@ font = 2
 ; format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 # format-underline = #4bffdc
-label = %percentage_used%%
+label = %percentage_used%% [%gb_used%]
 
 [module/wlan]
 type = internal/network
