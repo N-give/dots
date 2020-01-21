@@ -76,6 +76,7 @@ plugins=(
   python
   vi-mode
   zsh-syntax-highlighting
+  history-substring-search
 )
 
 export RPS1="%{$reset_color%}"
