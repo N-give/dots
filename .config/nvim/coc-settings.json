@@ -1,8 +1,7 @@
 {
   "languageserver": {
     "rust": {
-      "command": "ra_lsp_server",
-      "args": ["--lsp"],
+      "command": "rust-analyzer",
       "filetypes": ["rs", "rust"],
       "rootPatterns": ["Cargo.toml"],
       "initializationOptions": {
@@ -34,7 +33,7 @@
       ],
       "initializationOptions": {
         "languageServerHaskell": {
-          "hlint": true
+          "hlintOn": true
         }
       }
     }
