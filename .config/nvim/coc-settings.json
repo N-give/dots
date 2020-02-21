@@ -6,12 +6,12 @@
       "rootPatterns": ["Cargo.toml"],
       "initializationOptions": {
         "enableCargoWatchOnStartup": "enabled"
-      }
+      },
     },
 
     "clangd": {
       "command": "clangd",
-      "args": ["--background-index"],
+      "args": ["--background-index", "-Iinclude"],
       "filetypes": ["c", "cpp"],
       "rootPatterns": [".clang_format"]
     },
@@ -36,6 +36,18 @@
           "hlintOn": true
         }
       }
+    },
+
+    "python": {
+      "command": "autopep8",
+      "args": [
+        "--in-place",
+        "--aggressive"
+      ],
+      "filetypes": [
+        "py",
+        "python"
+      ],
     }
   }
 }
