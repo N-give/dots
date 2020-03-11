@@ -1,54 +1,68 @@
 {
-  "languageserver": {
-    "rust": {
-      "command": "rust-analyzer",
-      "filetypes": ["rs", "rust"],
-      "rootPatterns": ["Cargo.toml"],
-      "initializationOptions": {
-        "enableCargoWatchOnStartup": "enabled"
-      },
-    },
+    "coc.preferences.formatOnSaveFiletypes": [
+        "typescript",
+        "javascript",
+        "json",
+        "markdown"
+    ],
+    "coc.preferences.rootPatterns": [
+        ".vim",
+        ".git",
+        ".hg",
+        ".projections.json"
+    ],
+    "languageserver": {
+        "rust": {
+            "command": "rust-analyzer",
+            "filetypes": ["rs", "rust"],
+            "rootPatterns": ["Cargo.toml"],
+            "initializationOptions": {
+                "enableCargoWatchOnStartup": "enabled"
+            },
+        },
 
-    "clangd": {
-      "command": "clangd",
-      "args": ["--background-index", "-Iinclude"],
-      "filetypes": ["c", "cpp"],
-      "rootPatterns": [".clang_format"]
-    },
+        "clangd": {
+            "command": "clangd",
+            "args": ["--background-index", "-Iinclude"],
+            "filetypes": ["c", "cpp"],
+            "rootPatterns": [".clang_format"]
+        },
 
-    "haskell": {
-      "command": "hie-wrapper",
-      "args": [
-        "--lsp"
-      ],
-      "rootPatterns": [
-        "stack.yaml",
-        "cabal.config",
-        "package.yaml"
-      ],
-      "filetypes": [
-        "hs",
-        "lsh",
-        "haskell"
-      ],
-      "initializationOptions": {
-        "languageServerHaskell": {
-          "hlintOn": true
+        "haskell": {
+            "command": "hie-wrapper",
+            "args": [
+                "--lsp"
+            ],
+            "rootPatterns": [
+                "stack.yaml",
+                "cabal.config",
+                "package.yaml"
+            ],
+            "filetypes": [
+                "hs",
+                "lsh",
+                "haskell"
+            ],
+            "initializationOptions": {
+                "languageServerHaskell": {
+                    "hlintOn": true,
+                    "liquidOn": true,
+                    "formattingProvider": "brittany"
+                }
+            }
+        },
+
+        "python": {
+            "command": "autopep8",
+            "args": [
+                "--in-place",
+                "--aggressive"
+            ],
+            "filetypes": [
+                "py",
+                "python"
+            ],
         }
-      }
-    },
-
-    "python": {
-      "command": "autopep8",
-      "args": [
-        "--in-place",
-        "--aggressive"
-      ],
-      "filetypes": [
-        "py",
-        "python"
-      ],
     }
-  }
 }
 
