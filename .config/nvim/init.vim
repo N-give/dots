@@ -78,7 +78,9 @@ let g:ale_fixers = {
       \ '*': ['trim_whitespace'],
       \ 'javascript': ['eslint', 'prettier'],
       \ 'rust': ['rustfmt'],
-      \ 'python': ['autopep8']
+      \ 'python': ['autopep8'],
+      \ 'cpp': ['clang-format'],
+      \ 'haskell': ['brittany']
       \}
 
 let g:ale_sign_error=''
@@ -141,8 +143,8 @@ endfunction
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> [e <Plug>(coc-diagnostic-prev)
+nmap <silent> ]e <Plug>(coc-diagnostic-next)
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -245,7 +247,7 @@ set mouse=a
 set formatprg=""
 
 autocmd BufNewFile,BufRead *.hs,*.lhs set formatprg=hindent
-au FileType markdown setl sw=2 sts=2 et textwidth=120
+au FileType csv,markdown setl sw=2 sts=2 et textwidth=120
 
 set number relativenumber
 
@@ -258,6 +260,8 @@ augroup END
 "                          "
 " alternative key bindings "
 "                          "
+
+nnoremap <leader>w <C-w>
 
 " map Ctrl-Backspace to delete the previous word in insert mode
 noremap! <C-BS> <C-w>
