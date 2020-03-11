@@ -89,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+TERM=xterm-256color
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -154,7 +155,6 @@ bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
 
 # spaceship
-
 fpath=($fpath "/home/nate/.zfunctions")
 
   # Set Spaceship ZSH as a prompt
@@ -165,3 +165,4 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_USER_SHOW=true
 
 spaceship_vi_mode_enable
+fpath=($fpath "/home/nate/.zfunctions")
