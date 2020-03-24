@@ -1,8 +1,10 @@
 # dots
 
-Trying to synchronize my current configurations across my computers. Hopefully this will improve fresh install times.
+Trying to synchronize my current configurations across my computers. Hopefully
+this will improve fresh install times.
 
 Currently using the following technologies and their dependencies:
+
 1. neovim
 
     1. vim-plug
