@@ -245,6 +245,7 @@ set smartcase
 set textwidth=80
 set mouse=a
 set formatprg=""
+set colorcolumn=80
 
 autocmd BufNewFile,BufRead *.hs,*.lhs set formatprg=hindent
 au FileType csv,markdown setl sw=2 sts=2 et textwidth=120
