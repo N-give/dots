@@ -69,12 +69,13 @@ ZSH_THEME="test"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(
   git
   rust
   node
   python
-  vi-mode
+  # vi-mode
   zsh-syntax-highlighting
   history-substring-search
 )
@@ -123,7 +124,7 @@ fi
 #         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # vi mode
-bindkey -v
+# bindkey -v
 # export KEYTIMEOUT=1
 #
 # function zle-keymap-select {
@@ -163,6 +164,7 @@ fpath=($fpath "/home/nate/.zfunctions")
 
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_USER_SHOW=true
-
-spaceship_vi_mode_enable
-fpath=($fpath "/home/nate/.zfunctions")
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_EXEC_TIME_SHOW=false
+SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_EXIT_CODE_SHOW=true
