@@ -28,7 +28,7 @@
             "rootPatterns": [".clang_format"]
         },
 
-        "haskell": {
+        /* "haskell": {
             "command": "hie-wrapper",
             "args": [
                 "--lsp"
@@ -50,7 +50,7 @@
                     "formattingProvider": "brittany"
                 }
             }
-        },
+        }, */
 
         "python": {
             "command": "autopep8",
