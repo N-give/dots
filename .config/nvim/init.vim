@@ -40,6 +40,7 @@ map <Space> <leader>
 " indentLine settings
 let g:indentLine_char = '|'
 let g:indentLine_enable = 1
+let g:indentLine_fileTypeExclude = ['markdown']
 
 let g:rust_recommend_style=0
 
@@ -77,6 +78,7 @@ let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 let g:ale_fixers = {
       \ '*': ['trim_whitespace'],
       \ 'javascript': ['eslint', 'prettier'],
+      \ 'typescript': ['eslint', 'prettier'],
       \ 'rust': ['rustfmt'],
       \ 'python': ['autopep8'],
       \ 'cpp': ['clang-format'],
@@ -158,6 +160,9 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+"" language client
+" let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper', '--lsp'] }
 
 """"""""""""
 " deoplete "
