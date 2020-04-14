@@ -293,3 +293,4 @@ let g:tex_flavor = 'latex'
 
 " vim-rainbow
 let g:rainbow_active = 1
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
