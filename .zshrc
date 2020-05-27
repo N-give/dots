@@ -147,7 +147,6 @@ fi
 # echo -ne '\e[5 q' # Use beam shape cursor on startup.
 # preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-
 # reverse search history
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
