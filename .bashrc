@@ -75,21 +75,22 @@ xterm*|rxvt*)
 esac
 
 # enable color support of ls and also add handy aliases
+alias v='nvim'
+alias grep='grep --color=auto'
+alias config='/home/nate/.nix-profile/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias ytop='ytop -p'
+
+# navi aliases
+alias nq='navi query'
+
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
 
-    alias v='nvim'
-    alias vim='nvim'
-    alias cls='clear && ls'
-    alias cla='clear && ls -la'
-
     alias syswb='~/Ac6/SystemWorkbench/eclipse'
-    alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
     #alias fgrep='fgrep --color=auto'
     #alias egrep='egrep --color=auto'
 fi
@@ -120,6 +121,10 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+
+  if [ -f $HOME/.nix-profile/etc/profile.d/bash_completion.sh ]; then
+    . $HOME/.nix-profile/etc/profile.d/bash_completion.sh
+  fi
 fi
 
 bind '"\e[A":history-search-backward'
@@ -142,3 +147,13 @@ if test -z "${XDG_RUNTIME_DIR}"; then
     chmod 0700 "${XDG_RUNTIME_DIR}"
   fi
 fi
+
+# Base16 Shell
+# BASE16_SHELL="$HOME/.config/base16-shell/"
+# [ -n "$PS1" ] && \
+#     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#         eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+eval "$(direnv hook bash)"
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"

@@ -1,68 +1,96 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": [
-        "typescript",
-        "javascript",
-        "json",
-        "markdown"
-    ],
-    "coc.preferences.rootPatterns": [
-        ".vim",
-        ".git",
-        ".hg",
-        ".projections.json"
-    ],
-    "languageserver": {
-        "rust": {
-            "command": "rust-analyzer",
-            "filetypes": ["rs", "rust"],
-            "rootPatterns": ["Cargo.toml"],
-            "initializationOptions": {
-                "enableCargoWatchOnStartup": "enabled"
-            },
-        },
-
-        "clangd": {
-            "command": "clangd",
-            "args": ["--background-index", "-Iinclude"],
-            "filetypes": ["c", "cpp"],
-            "rootPatterns": [".clang_format"]
-        },
-
-        /* "haskell": {
-            "command": "hie-wrapper",
-            "args": [
-                "--lsp"
-            ],
-            "rootPatterns": [
-                "stack.yaml",
-                "cabal.config",
-                "package.yaml"
-            ],
-            "filetypes": [
-                "hs",
-                "lsh",
-                "haskell"
-            ],
-            "initializationOptions": {
-                "languageServerHaskell": {
-                    "hlintOn": true,
-                    "liquidOn": true,
-                    "formattingProvider": "brittany"
-                }
-            }
-        }, */
-
-        "python": {
-            "command": "autopep8",
-            "args": [
-                "--in-place",
-                "--aggressive"
-            ],
-            "filetypes": [
-                "py",
-                "python"
-            ],
-        }
-    }
+  "coc.preferences.formatOnType": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "typescript",
+    "javascript",
+    "json",
+    "markdown"
+  ],
+  "coc.preferences.rootPatterns": [
+    ".vim",
+    ".git",
+    ".hg",
+    ".projections.json"
+  ],
+  "css.colorDecorators.enable": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "diagnostic.displayByAle": false,
+  "solargraph.checkGemVersion": false,
+  "solargraph.autoformat": true,
+  "languageserver": {
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": [
+        "rs",
+        "rust"
+      ],
+      "rootPatterns": [
+        "Cargo.toml"
+      ],
+      "initializationOptions": {
+        "enableCargoWatchOnStartup": "enabled"
+      }
+    },
+    // "clangd": {
+    //   "command": "clangd",
+    //   "args": [
+    //     "--background-index",
+    //     "-Iinclude"
+    //   ],
+    //   "filetypes": [
+    //     "c",
+    //     "cpp"
+    //   ],
+    //   "rootPatterns": [
+    //     ".clang_format"
+    //   ]
+    // },
+    // "haskell": {
+    //   "command": "haskell-language-server-wrapper",
+    //   "args": [
+    //     "--lsp"
+    //   ],
+    //   "rootPatterns": [
+    //     "*.cabal",
+    //     "stack.yaml",
+    //     "cabal.project",
+    //     "package.yaml",
+    //     "hie.yaml"
+    //   ],
+    //   "filetypes": [
+    //     "haskell",
+    //     "lhaskell"
+    //   ]
+    // },
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
+      ],
+      "filetypes": ["haskell", "lhaskell"]
+    },
+    "elm": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        // "elmPath": "elm", // optional
+        // "elmFormatPath": "elm-format", // optional
+        // "elmTestPath": "elm-test", // optional
+        "elmAnalyseTrigger": "change" // optional
+      }
+    },
+    // "lua": {
+    //   "command": "/nix/store/whbh4rzslgncr2dwc7kdjsywqjy7yw7w-sumneko-lua-language-server-2.5.1/share/lua-language-server/bin/Linux/lua-languag-server",
+    //   "args": ["-E", "/nix/store/whbh4rzslgncr2dwc7kdjsywqjy7yw7w-sumneko-lua-language-server-2.5.1/share/lua-language-server/bin/Linux/main.lua"],
+    //   "rootPatterns": [".git"],
+    //   "filetypes": ["lua"]
+    // }
+  }
 }
-
